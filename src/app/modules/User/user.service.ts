@@ -9,18 +9,18 @@ const createUser = async (payload: TUser) => {
   return user;
 };
 
-const getAllUsersFromDB = async (query: Record<string, unknown>) => {
-  const users = new QueryBuilder(User.find(), query)
-    .fields()
-    .paginate()
-    .sort()
-    .filter()
-    .search(UserSearchableFields);
+// const getAllUsersFromDB = async (query: Record<string, unknown>) => {
+//   const users = new QueryBuilder(User.find(), query)
+//     .fields()
+//     .paginate()
+//     .sort()
+//     .filter()
+//     .search(UserSearchableFields);
 
-  const result = await users.modelQuery;
+//   const result = await users.modelQuery;
 
-  return result;
-};
+//   return result;
+// };
 
 const getSingleUserFromDB = async (id: string) => {
   const user = await User.findById(id);
