@@ -10,7 +10,6 @@ const createItemValidationSchema = z.object({
     description: z.string({
       required_error: 'Description is required',
     }),
-    image: z.string().optional(),
     location: z.string({
       required_error: 'Location is required',
     }),

@@ -12,7 +12,7 @@ import { USER_ROLE } from '../User/user.constant';
 const router = express.Router();
 
 router.post(
-  '/',
+  '/create-item',
   auth(USER_ROLE.USER),
   multerUpload.fields([{ name: 'itemImages' }]),
   validateImageFileRequest(ImageFilesArrayZodSchema),
